@@ -226,8 +226,7 @@ class Deploy extends Command
 
         $command =
             "php ./bin/magento setup:install \
-            --session-save=db \
-            --cleanup-database \
+            --session-save=db \            
             --currency=$this->defaultCurrency \
             --base-url=$urlUnsecure \
             --base-url-secure=$urlSecure \

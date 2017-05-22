@@ -22,7 +22,7 @@ class Environment
      */
     public function getRoutes()
     {
-        return json_decode(base64_decode($_ENV["MAGENTO_CLOUD_ROUTES"]), true);
+        return json_decode(base64_decode($_ENV["PLATFORM_ROUTES"]), true);
     }
 
     /**
@@ -32,7 +32,7 @@ class Environment
      */
     public function getRelationships()
     {
-        return json_decode(base64_decode($_ENV["MAGENTO_CLOUD_RELATIONSHIPS"]), true);
+        return json_decode(base64_decode($_ENV["PLATFORM_RELATIONSHIPS"]), true);
     }
 
     /**
@@ -42,7 +42,7 @@ class Environment
      */
     public function getVariables()
     {
-        return json_decode(base64_decode($_ENV["MAGENTO_CLOUD_VARIABLES"]), true);
+        return json_decode(base64_decode($_ENV["PLATFORM_VARIABLES"]), true);
     }
 
 

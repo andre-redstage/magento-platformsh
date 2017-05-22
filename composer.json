@@ -1,5 +1,5 @@
 {
-  "name": "magento/magento-cloud-configuration",
+  "name": "andre-redstage/magento-platformsh",
   "description": "Provides default configuration to build and deploy Magento 2 Enterprise Edition",
   "version": "101.5.0",
   "license": [

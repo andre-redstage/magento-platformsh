@@ -224,27 +224,26 @@ class Deploy extends Command
         $urlUnsecure = $this->urls['unsecure'][''];
         $urlSecure = $this->urls['secure'][''];
 
-        $command =
-            "php ./bin/magento setup:install \
-            --session-save=db \            
-            --currency=$this->defaultCurrency \
-            --base-url=$urlUnsecure \
-            --base-url-secure=$urlSecure \
-            --language=$this->adminLocale \
-            --timezone=America/Los_Angeles \
-            --db-host=$this->dbHost \
-            --db-name=$this->dbName \
-            --db-user=$this->dbUser \
-            --backend-frontname=$this->adminUrl \
-            --admin-user=$this->adminUsername \
-            --admin-firstname=$this->adminFirstname \
-            --admin-lastname=$this->adminLastname \
-            --admin-email=$this->adminEmail \
-            --admin-password=$this->adminPassword";
+        $command = '';
+        $command .= "php ./bin/magento setup:install ";
+        $command .= "--session-save=db ";
+        $command .= "--currency=$this->defaultCurrency ";
+        $command .= "--base-url=$urlUnsecure ";
+        $command .= "--base-url-secure=$urlSecure ";
+        $command .= "--language=$this->adminLocale ";
+        $command .= "--timezone=America/Los_Angeles ";
+        $command .= "--db-host=$this->dbHost ";
+        $command .= "--db-name=$this->dbName ";
+        $command .= "--db-user=$this->dbUser ";
+        $command .= "--backend-frontname=$this->adminUrl ";
+        $command .= "--admin-user=$this->adminUsername ";
+        $command .= "--admin-firstname=$this->adminFirstname ";
+        $command .= "--admin-lastname=$this->adminLastname ";
+        $command .= "--admin-email=$this->adminEmail ";
+        $command .= "--admin-password=$this->adminPassword";
 
         if (strlen($this->dbPassword)) {
-            $command .= " \
-            --db-password=$this->dbPassword";
+            $command .= " --db-password=$this->dbPassword";
         }
 
         $command .= $this->verbosityLevel;

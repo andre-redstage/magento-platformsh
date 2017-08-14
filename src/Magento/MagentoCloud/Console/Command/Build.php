@@ -56,8 +56,8 @@ class Build extends Command
     private function build()
     {
         $this->env->log("Start build.");
-        $this->applyMccPatches();
-        $this->applyCommittedPatches();
+//         $this->applyMccPatches();
+//         $this->applyCommittedPatches();
         $this->compileDI();
         $this->clearInitDir();
         $this->env->execute('rm -rf app/etc/env.php');

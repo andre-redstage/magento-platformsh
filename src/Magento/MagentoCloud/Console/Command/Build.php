@@ -38,7 +38,7 @@ class Build extends Command
      */
     protected function configure()
     {
-        $this->setName('magento-cloud:build')
+        $this->setName('platformsh:build')
             ->setDescription('Invokes set of steps to build source code for the Magento on the Magento Cloud');
         parent::configure();
     }
@@ -82,7 +82,7 @@ class Build extends Command
      */
     private function applyMccPatches()
     {
-        $this->env->log("Applying magento-cloud-configuration patches.");
+        $this->env->log("Applying platform.sh configuration patches.");
         $this->env->execute('/usr/bin/php ' . Environment::MAGENTO_ROOT . 'vendor/redstage/magento-platformsh/patch.php');
     }
 

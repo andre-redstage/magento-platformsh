@@ -74,7 +74,7 @@ class Deploy extends Command
      */
     protected function configure()
     {
-        $this->setName('magento-cloud:deploy')
+        $this->setName('platformsh:deploy')
             ->setDescription('Deploy an instance of Magento on the Magento Cloud');
         parent::configure();
     }
